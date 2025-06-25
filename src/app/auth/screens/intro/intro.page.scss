@@ -1,0 +1,134 @@
+.login-content {
+  --background: transparent;
+  position: relative;
+  height: 100vh;
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/assets/images/ImagenFondoColegio.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    z-index: 0;
+  }
+
+  .login-card {
+    position: relative;
+    z-index: 1;
+    margin: 70px 45px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 40px 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .logo {
+    width: 180px;
+    margin-bottom: 10px;
+    margin-top: -10px; /* sube la imagen */
+  }
+
+  .school-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: -15px 0 5px;
+    background: #ffffff;
+    color: #252723;
+  }
+
+  .welcome-text {
+    color: #203E98;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+.input-item {
+  --background: transparent; /* quita el fondo por defecto del ion-item */
+  background: white;
+  color:#000000;         /* fondo blanco real */
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eye-icon {
+  font-size: 22px;
+  color: #E71C26;
+  cursor: pointer;
+}
+
+
+  .password-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #252723;
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      color: #203E98;
+      font-weight: 500;
+      font-weight: bold;
+    }
+  }
+
+  .password-options span {
+  display: block;
+  line-height: 1.5;  /* Más espacio entre líneas */
+  margin-right: 15px; 
+}
+
+  .login-button {
+    --background: #E71C26;
+    color: #ffffff;
+    --border-radius: 200px;
+    margin-bottom: 10px;
+    margin-top: 22px;
+  }
+
+  .google-button {
+    --background: #203E98;
+    --border-radius: 200px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .word-options span {
+    color: #252723;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+  .signup-button {
+    color: #ffffff;
+    --border-radius: 200px;
+    --background: #E71C26;
+    margin-bottom: 10px;
+    padding-top: 5px;
+  }
+
+  .terms {
+    text-align: center;         /* Centra el texto */
+    font-size: 12px;            /* Tamaño de fuente más compacto */
+    max-width: 280px;           /* Limita el ancho del párrafo */
+    margin: 0 auto 20px auto;   /* Centra horizontalmente */
+    color: #252723;                /* Color más suave opcional */
+    padding-top: 10px;
+
+    a {
+      color: #203E98;
+      text-decoration: none;
+    }
+  }
+}

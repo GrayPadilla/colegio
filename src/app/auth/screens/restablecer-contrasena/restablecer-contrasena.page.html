@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <!-- Imagen de fondo -->
+  <div class="background-image"></div>
+
+  <!-- Botón de regreso -->
+  <ion-button class="custom-back-button" (click)="goBack()">
+    <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+  </ion-button>
+
+  <div class="login-card">
+    <img src="assets/images/ImagenRestablecerContrasena.png" class="logo" alt="Logo" />
+
+    <h2 class="mensage-name">Nueva contraseña</h2>
+
+    <h2 class="welcome-text">
+      Se le ha enviado un correo electrónico con un enlace para restablecer su contraseña.
+      Una vez completado el proceso, deberá iniciar sesión nuevamente con su usuario y la nueva contraseña.
+    </h2>
+
+    <h2 class="welcome-text">
+      Nota: Si no encuentra el correo en la bandeja de entrada, por favor revise la carpeta de Spam o Correo no deseado.
+    </h2>
+
+    <!-- Botón que redirige a /intro -->
+    <ion-button
+      expand="block"
+      class="login-button"
+      (click)="irALogin()">
+      REGRESAR A INICIO
+    </ion-button>
+
+    <h2 class="final-text">
+      Aviso: La contraseña puede ser restablecida cuando lo desee, pero no es recomendable
+    </h2>
+  </div>
+</ion-content>

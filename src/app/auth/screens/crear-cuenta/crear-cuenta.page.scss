@@ -1,0 +1,121 @@
+.login-content {
+  --background: transparent;
+  position: relative;
+  height: 100vh;
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/assets/images/ImagenFondoColegio.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    z-index: 0;
+  }
+
+.custom-back-button {
+  --background: #001f7f; // Fondo azul oscuro (ajústalo según tu imagen)
+  --color: #ff0000;       // Color del icono rojo
+  --border-radius: 13px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); // Sombra suave
+  margin: 8px;
+}
+
+  .login-card {
+    position: relative;
+    z-index: 1;
+    margin: 35px 45px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 40px 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .logo {
+    width: 180px;
+    margin-bottom: 10px;
+    margin-top: -10px; /* sube la imagen */
+  }
+  
+  .call-icon{
+    color: #E71C26;
+  }
+
+  .person-icon{
+    color: #E71C26;
+  }
+
+  .school-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: -15px 0 5px;
+    background: #ffffff;
+    color: #252723;
+  }
+
+  .welcome-text {
+    color: #203E98;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+.input-item {
+  --background: transparent; /* quita el fondo por defecto del ion-item */
+  background: white;
+  color:#000000;         /* fondo blanco real */
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.key-icon {
+  font-size: 22px;
+  color: #E71C26;
+  cursor: pointer;
+}
+
+ion-button.login-button {
+    color: #ffffff;
+    --border-radius: 200px;
+    margin-bottom: 10px;
+    margin-top: 22px;
+    transition: background-color 0.3s ease;
+
+    &.form-valid {
+    --background: #E71C26; // rojo fuerte
+    opacity: 1;
+    }
+    &.form-invalid {
+    --background: #f9aaaa; // rojo suave
+    opacity: 1.5;
+  }
+}
+
+  .terms {
+    text-align: center;         /* Centra el texto */
+    font-size: 12px;            /* Tamaño de fuente más compacto */
+    max-width: 280px;           /* Limita el ancho del párrafo */
+    margin: 0 auto 20px auto;   /* Centra horizontalmente */
+    color: #252723;                /* Color más suave opcional */
+    padding-top: 10px;
+
+    a {
+      color: #203E98;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <ion-title class="header-title">Mensajes</ion-title>
+  </ion-toolbar>
+
+  <!-- Buscador arriba -->
+  <ion-toolbar class="search-toolbar">
+    <ion-searchbar
+      placeholder="Buscar mensajes"
+      showCancelButton="focus"
+      debounce="300"
+      animated="true"
+      class="searchbar-custom"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-list>
+
+    <!-- Mensaje 1 -->
+    <ion-item class="message-item" lines="none" detail="false">
+      <ion-avatar slot="start" class="avatar">
+        <img src="../../assets/images/mamawa.jpg" />
+      </ion-avatar>
+      <ion-label class="message-text">
+        <h2 class="sender-name">Profesor Juan</h2>
+        <p class="last-message">Nos vemos mañana.</p>
+      </ion-label>
+      <ion-note slot="end" class="message-time">10:15 AM</ion-note>
+    </ion-item>
+
+    <!-- Mensaje 2 -->
+    <ion-item class="message-item" lines="none" detail="false">
+      <ion-avatar slot="start" class="avatar">
+        <img src="../../assets/images/prosor.jpg" />
+      </ion-avatar>
+      <ion-label class="message-text">
+        <h2 class="sender-name">Padre de Ana</h2>
+        <p class="last-message">Gracias por la reunión.</p>
+      </ion-label>
+      <ion-note slot="end" class="message-time">9:30 AM</ion-note>
+    </ion-item>
+
+    <!-- Mensaje 3 -->
+    <ion-item class="message-item" lines="none" detail="false">
+      <ion-avatar slot="start" class="avatar">
+        <img src="../../assets/images/prosorLuis.jpg" />
+      </ion-avatar>
+      <ion-label class="message-text">
+        <h2 class="sender-name">Docente Luis</h2>
+        <p class="last-message">¿Podemos reagendar?</p>
+      </ion-label>
+      <ion-note slot="end" class="message-time">Ayer</ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- Botón flotante nuevo mensaje -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" aria-label="Nuevo mensaje">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <!-- Imagen de fondo -->
+  <div class="background-image"></div>
+
+  <!-- Botón de regreso -->
+  <ion-button class="custom-back-button" (click)="goBack()">
+    <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+  </ion-button>
+
+  <div class="login-card">
+    <img src="assets/images/LogoColegio.jpeg" class="logo" alt="Logo" />
+    <h2 class="school-name">Institución Educativa<br />2005 Retablo</h2>
+    <h3 class="welcome-text">Crear Cuenta</h3>
+
+    <form [formGroup]="cuentaForm">
+
+      <!-- Campo ingresar nombre -->
+      <ion-item lines="none" class="input-item">
+        <ion-input placeholder="Ingrese su nombre" type="text" class="white-input" formControlName="nombre"></ion-input>
+        <ion-icon name="person-outline" slot="start" class="person-icon"></ion-icon>
+      </ion-item>
+      <ion-text color="danger" *ngIf="cuentaForm.get('nombre')?.touched && cuentaForm.get('nombre')?.invalid">
+        <small>El nombre es obligatorio.</small>
+      </ion-text>
+
+      <!-- Campo ingresar correo electrónico -->
+      <ion-item lines="none" class="input-item" [class.invalid]="cuentaForm.get('correo')?.invalid && cuentaForm.get('correo')?.touched">
+        <ion-input
+          placeholder="Correo electrónico"
+          type="email"
+          class="white-input"
+          inputmode="email"
+          formControlName="correo">
+        </ion-input>
+        <ion-icon name="mail-outline" slot="start" class="call-icon"></ion-icon>
+      </ion-item>
+      <ion-text color="danger" *ngIf="cuentaForm.get('correo')?.touched && cuentaForm.get('correo')?.invalid">
+        <small *ngIf="cuentaForm.get('correo')?.errors?.['required']">El correo es obligatorio.</small>
+        <small *ngIf="cuentaForm.get('correo')?.errors?.['email']">Debe ser un correo válido.</small>
+      </ion-text>
+
+      <!-- Campo ingresar contraseña -->
+      <ion-item lines="none" class="input-item">
+        <ion-input #passwordInput type="password" placeholder="Contraseña" class="white-input" formControlName="contrasena"></ion-input>
+        <ion-icon name="key-outline" slot="start" class="key-icon" (click)="togglePassword(passwordInput, 'main')"></ion-icon>
+      </ion-item>
+      <ion-text color="danger" *ngIf="cuentaForm.get('contrasena')?.touched && cuentaForm.get('contrasena')?.invalid">
+        <small>La contraseña es obligatoria.</small>
+      </ion-text>
+
+      <!-- Campo confirmar contraseña -->
+      <ion-item lines="none" class="input-item">
+        <ion-input #confirmPasswordInput type="password" placeholder="Confirmar contraseña" class="white-input" formControlName="confirmarContrasena"></ion-input>
+        <ion-icon name="key-outline" slot="start" class="key-icon" (click)="togglePassword(confirmPasswordInput, 'confirm')"></ion-icon>
+      </ion-item>
+      <ion-text color="danger" *ngIf="cuentaForm.get('confirmarContrasena')?.touched && cuentaForm.get('confirmarContrasena')?.invalid">
+        <small>Debe confirmar la contraseña.</small>
+      </ion-text>
+
+      <!-- Mensaje por si las contraseñas no coinciden -->
+      <ion-text color="danger" *ngIf="cuentaForm.hasError('noCoinciden') && cuentaForm.get('confirmarContrasena')?.touched">
+        <small>Las contraseñas no coinciden.</small>
+      </ion-text>
+
+      <!-- Botón de registro -->
+      <ion-button
+        expand="block"
+        class="login-button"
+        [class.form-valid]="cuentaForm.valid"
+        [class.form-invalid]="!cuentaForm.valid"
+        [disabled]="!cuentaForm.valid"
+        (click)="registrarCuenta()">
+        REGISTRARSE
+      </ion-button>
+
+      <p class="terms">
+        Al registrarse, acepta nuestros 
+        <a href="#">Términos</a>, 
+        <a href="#">Política de privacidad</a> y 
+        <a href="#">Uso de cookies</a>
+      </p>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,165 @@
+.login-content {
+  --background: transparent;
+  position: relative;
+  height: 100vh;
+
+    .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/assets/images/ImagenFondoColegio.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    z-index: 0;
+    }
+
+    .login-card {
+    position: relative;
+    z-index: 1;
+    margin: 35px 45px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 40px 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+    .logo {
+    width: 700px;
+    height: 200px; 
+    margin-bottom: 5px;
+    margin-top: 10px; /* sube la imagen */
+  }
+  
+    .custom-back-button {
+    --background: #001f7f; // Fondo azul oscuro (ajústalo según tu imagen)
+    --color: #ff0000;       // Color del icono rojo
+    --border-radius: 13px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); // Sombra suave
+    margin: 8px;
+    }
+
+    .mensage-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 40px 0 5px;
+    background: #ffffff;
+    color: #001f7f;
+    text-align: left;
+  }
+
+    .welcome-text {
+    color: #bfbfbf;
+    margin-bottom: 20px;
+    font-size: 1.0em;
+    text-align: justify;
+    justify-content: center;
+  }
+
+  .input-item {
+  --background: transparent; /* quita el fondo por defecto del ion-item */
+  background: white;
+  color:#000000;         /* fondo blanco real */
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ }
+
+ .key-icon {
+ font-size: 22px;
+ color: #E71C26;
+ cursor: pointer;
+}
+
+.login-button {
+    color: #ffffff;
+    --border-radius: 200px;
+    --background: #E71C26;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.login-button:hover {
+  transform: scale(1.02);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+  .final-text {
+  color: #bfbfbf;
+  margin-bottom: 20px;
+  font-size: 0.7em;
+  text-align: justify;
+  justify-content: center;
+  }
+
+  .modal-exito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #32CD32;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: -20px -20px 10px -20px;
+}
+
+.icono-exito {
+  font-size: 48px;
+  color: white;
+}
+
+.titulo-exito {
+  color: #32CD32;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mensaje-exito {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0 20px 0;
+}
+
+.boton-modal {
+  --background: #32CD32;
+  --color: white;
+  border-radius: 20px;
+}
+
+}
