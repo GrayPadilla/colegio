@@ -71,7 +71,24 @@ const routes: Routes = [
   {
     path: 'reportes',
     loadComponent: () => import('./reportes/reportes.page').then(m => m.ReportesPage)
-  }
+  },
+  {
+  path: 'nuevo-reporte',
+  loadComponent: () =>
+    import('./nuevo-reporte/nuevo-reporte.page').then(m => m.NuevoReportePage)
+}
+,
+  {
+  path: 'nueva-reunion',
+  loadComponent: () =>
+    import('./nueva-reunion/nueva-reunion.page').then(m => m.NuevaReunionPage)
+}
+,
+  {
+  path: 'detalle-reporte/:id',
+  loadComponent: () =>
+    import('./detalle-reporte/detalle-reporte.page').then(m => m.DetalleReportePage)
+}
 
 ];
 

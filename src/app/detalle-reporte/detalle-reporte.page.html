@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">📄 Vista del Reporte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="reporte" id="reporte-pdf">
+    <ion-card-header>
+      <ion-card-title>{{ reporte.titulo }}</ion-card-title>
+      <ion-card-subtitle>{{ reporte.fecha }} - {{ reporte.tipo }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Grado y Sección:</strong> {{ reporte.gradoSeccion }}</p>
+      <p><strong>Descripción:</strong></p>
+      <p>{{ reporte.descripcion }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="primary" (click)="generarPDF()">
+    <ion-icon slot="start" name="download-outline"></ion-icon>
+    Descargar PDF
+  </ion-button>
+</ion-content>

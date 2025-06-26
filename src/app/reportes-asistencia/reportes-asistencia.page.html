@@ -15,40 +15,25 @@
 </ion-header>
 
 <ion-content class="reportes-content">
-  <ion-button expand="block" class="nuevo-reporte-btn">
+  <ion-button
+    expand="block"
+    class="nuevo-reporte-btn"
+    (click)="goToNuevoReporte()"
+  >
     <ion-icon slot="start" name="add-circle-outline"></ion-icon>
     Nuevo Reporte
   </ion-button>
 
   <ion-list class="lista-reportes">
-    <ion-item>
-      <ion-label>
-        <h3>Asistencia mensual - 1ro A</h3>
-        <p>15/05/2025 - Asistencia</p>
-      </ion-label>
-      <ion-button fill="clear" color="medium" slot="end">
-        <ion-icon name="eye-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
+  <ion-item *ngFor="let r of reportes">
+    <ion-label>
+      <h3>{{ r.titulo }}</h3>
+      <p>{{ r.fecha }} - {{ r.tipo }}</p>
+    </ion-label>
+    <ion-button fill="clear" color="medium" slot="end" (click)="verDetalle(r.id)">
+      <ion-icon name="eye-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-list>
 
-    <ion-item>
-      <ion-label>
-        <h3>Informe de conducta - Abril</h3>
-        <p>10/05/2025 - Actividad</p>
-      </ion-label>
-      <ion-button fill="clear" color="medium" slot="end">
-        <ion-icon name="eye-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <h3>Reunión con Padres - 2do B</h3>
-        <p>08/05/2025 - Asistencia</p>
-      </ion-label>
-      <ion-button fill="clear" color="medium" slot="end">
-        <ion-icon name="eye-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
 </ion-content>

@@ -1,0 +1,67 @@
+/* detalle-reporte.page.scss */
+
+:host {
+  --ion-background-color: #f9fbfd;
+  background: #f9fbfd;
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-content {
+  --background: #f9fbfd;
+}
+
+ion-card {
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+ion-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+ion-card-subtitle {
+  font-size: 0.95rem;
+  color: #4f4f4f;
+  margin-top: 4px;
+}
+
+ion-card-content p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+ion-card-content p strong {
+  color: #1a237e;
+}
+
+ion-button {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+ion-icon {
+  margin-right: 6px;
+}
+
+/* Botones organizados en grid */
+ion-grid {
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  ion-card-title {
+    font-size: 1.2rem;
+  }
+  ion-button {
+    font-size: 0.9rem;
+  }
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-reuniones-programadas-director',
@@ -9,4 +9,10 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './reuniones-programadas-director.page.html',
   styleUrls: ['./reuniones-programadas-director.page.scss'],
 })
-export class ReunionesProgramadasDirectorPage {}
+export class ReunionesProgramadasDirectorPage {
+  constructor(private navCtrl: NavController) {}
+
+  goToNuevaReunion() {
+    this.navCtrl.navigateForward('/nueva-reunion');
+  }
+}
